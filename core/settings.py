@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     "rest_framework",
     "corsheaders",
+    "api.apps.ApiConfig",
 ]
 
 
@@ -82,9 +83,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "postgres",
+        "NAME": "ltg",
+        "USER": "mm",
+        "PASSWORD": "mm",
         "HOST": "db",
         "PORT": "5432",
     }
@@ -130,4 +131,7 @@ STATIC_URL = 'static/'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True  # dev only
+CORS_ALLOW_CREDENTIALS = True
 
