@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "api.apps.ApiConfig",
+    "users",
 ]
 
 
@@ -140,3 +141,4 @@ REST_FRAMEWORK = {
     ),
 }
 
+AUTH_USER_MODEL = "users.User"
